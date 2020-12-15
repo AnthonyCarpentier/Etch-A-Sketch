@@ -50,6 +50,9 @@ function resetBoard() {
     });
 
     let newPixelCountWidth = prompt(`Please enter the numeric value of pixels you want per side(default is 16, max is 100)`);
+    if (newPixelCountWidth > 100) {
+        newPixelCountWidth = 100
+    }
     resetPlayableArea();
     drawPlayableArea(newPixelCountWidth);
     pixelCountWidth = newPixelCountWidth;
